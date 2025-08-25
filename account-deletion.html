@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BakeLog 계정 및 데이터 삭제 안내</title>
+  <meta name="description" content="BakeLog 앱의 계정 삭제 및 데이터 삭제(또는 보관) 방법을 안내합니다." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111821;
+      --muted: #6b7a8a;
+      --text: #e9eef5;
+      --accent: #57a6ff;
+      --ok: #28c193;
+      --warn: #ffc857;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 70% -10%, #14202e 0%, var(--bg) 55%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
+    .hero {
+      background: linear-gradient(180deg, rgba(87,166,255,0.15), rgba(87,166,255,0.03));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px; padding: 28px; margin: 16px 0 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.3px; }
+    .sub { color: var(--muted); margin: 0; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 20px; margin: 0 0 10px; letter-spacing: -0.2px; }
+    h3 { font-size: 17px; margin: 18px 0 8px; }
+    ul { padding-left: 20px; }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 0.96em; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: var(--muted); font-size: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
+    @media (max-width: 820px) { .col-6 { grid-column: span 12; } }
+    .cta { display: inline-block; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); text-decoration: none; color: var(--text); transition: transform .08s ease, background .2s ease; }
+    .cta:hover { transform: translateY(-1px); background: rgba(255,255,255,0.04); }
+    .accent { color: var(--accent); }
+    .ok { color: var(--ok); }
+    .warn { color: var(--warn); }
+    .small { font-size: 13px; color: var(--muted); }
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="badge">계정 및 데이터 삭제 안내</div>
+      <h1>📌 BakeLog 계정 삭제 방법</h1>
+      <p class="sub">개발자: <strong>Luna</strong> · 문의: <a class="cta" href="mailto:luna19.song@gmail.com">support@bakelog.app</a></p>
+    </div>
+
+    <div class="grid">
+      <section class="card col-12">
+        <h2>요약</h2>
+        <ul>
+          <li>앱 내 경로: <span class="mono">설정 → 계정 관리 → 계정 삭제</span></li>
+          <li>또는 이메일/문의 양식으로 삭제 요청 가능</li>
+          <li>삭제 대상: 계정 식별자, 인증 토큰, 프로필/기본 설정, 레시피 등 사용자 생성 데이터</li>
+          <li>보관 예외: 법적 의무 또는 분쟁 처리 목적의 최소 정보는 <strong>최대 30일</strong> 간 보관 후 자동 삭제</li>
+        </ul>
+      </section>
+
+      <section class="card col-6">
+        <h2>앱 내에서 직접 삭제</h2>
+        <ol>
+          <li><span class="mono">설정 → 계정 관리</span>로 이동</li>
+          <li><strong>계정 삭제</strong> 선택 및 확인</li>
+          <li>앱 재시작 후 로그아웃 상태 확인</li>
+        </ol>
+        <p class="small">직접 삭제가 보이지 않을 경우 아래의 <em>삭제 요청</em> 방법을 이용해 주세요.</p>
+      </section>
+
+      <section class="card col-6">
+        <h2>삭제 요청 (대체 경로)</h2>
+        <p>다음 방법 중 하나로 요청해 주세요.</p>
+        <ul>
+          <li>이메일: <a class="cta" href="mailto:luna19.song@gmail.com?subject=%5BBakeLog%5D%20%EA%B3%84%EC%A0%95%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">support@bakelog.app</a></li>
+          <li>문의 양식: <a class="cta" href="#" aria-disabled="true" onclick="return false;">https://forms.gle/your-form-id</a> <span class="small">(옵션, 폼 사용 시 링크 교체)</span></li>
+        </ul>
+        <p class="small">요청 시 다음 정보를 포함해 주세요: 가입 이메일(또는 Google UID), 앱 버전, 기기 모델.</p>
+      </section>
+
+      <section class="card col-12">
+        <h2>삭제/보관되는 데이터</h2>
+        <div class="grid">
+          <div class="col-6">
+            <h3>삭제되는 데이터</h3>
+            <ul>
+              <li>계정 식별자: 익명 UID, 이메일 기반 UID, Google 로그인 UID</li>
+              <li>인증 토큰 및 연결 정보 (Firebase Authentication)</li>
+              <li>프로필/기본 설정(앱 내 저장)</li>
+              <li>사용자 생성 콘텐츠(예: 레시피, 메모 등)</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <h3>보관/예외</h3>
+            <ul>
+              <li>법적 의무 이행, 분쟁/사기 방지를 위한 최소 정보는 <strong>최대 30일</strong> 보관 후 파기</li>
+              <li>백업/로그 시스템에 남을 수 있는 기록은 <span class="small">순환 보관 주기</span>에 따라 제거</li>
+              <li>카메라 촬영 이미지는 <strong>서버에 지속 보관하지 않음</strong> (AI 분석 후 폐기)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="small">Firebase(인증/스토리지/데이터베이스)를 사용하며, 데이터는 전송 시 <span class="ok">암호화</span>됩니다.</p>
+      </section>
+
+      <section class="card col-12">
+        <h2>계정 유형별 안내</h2>
+        <ul>
+          <li><strong>익명 계정</strong>: 삭제 시 연결된 UID 및 관련 데이터가 즉시 삭제됩니다.</li>
+          <li><strong>이메일/비밀번호</strong>: 본인 확인 후 계정 및 데이터가 삭제됩니다.</li>
+          <li><strong>Google 로그인</strong>: 요청 시 해당 Google UID에 연결된 데이터가 삭제됩니다. (Google 계정 자체는 영향을 받지 않음)</li>
+        </ul>
+      </section>
+
+      <section class="card col-12">
+        <h2>처리 기한 및 결과 통지</h2>
+        <ul>
+          <li>요청 접수 후 <strong>7일 이내</strong> 처리</li>
+          <li>처리 완료 시 이메일로 결과 안내</li>
+          <li>본인 확인이 불가한 경우 추가 정보 요청 가능</li>
+        </ul>
+      </section>
+
+      <section class="card col-12">
+        <h2>문의</h2>
+        <p>데이터 삭제와 관련한 문의는 <a class="cta" href="mailto:support@bakelog.app">support@bakelog.app</a> 로 연락해 주세요.</p>
+      </section>
+
+      <section class="col-12 small" aria-label="법적 고지">
+        <p>본 안내는 Google Play 데이터 삭제 정책을 준수하기 위한 것이며, 관련 법령(예: 전자상거래법, 세법 등)에 따라 일부 데이터는 보관 의무가 있을 수 있습니다.</p>
+        <p>최종 업데이트: <time datetime="2025-08-25">2025-08-25</time></p>
+      </section>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> BakeLog · All rights reserved.
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
